@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>7 Months Anniversary</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .page {
+    display: none;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .active {
+    display: flex;
+  }
+
+  button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 12px;
+    background: #ff6b81;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  button:hover {
+    background: #ff4757;
+  }
+
+  #page1 { background: linear-gradient(to right, #ff9a9e, #fad0c4); }
+  #page2 { background: linear-gradient(to right, #a18cd1, #fbc2eb); }
+  #page3 { background: linear-gradient(to right, #fbc2eb, #a6c1ee); }
+  #page4 { background: linear-gradient(to right, #fbc2eb, #a6c1ee); }
+  #page5 { background: linear-gradient(to right, #fbc2eb, #a6c1ee); }
+  #page6 { background: linear-gradient(to right, #fbc2eb, #a6c1ee); }
+  #page7 { background: linear-gradient(to right, #fbc2eb, #a6c1ee); }
+</style>
+
+</head>
+<body>
+
+<!-- 🎵 เพลง -->
+<audio id="music" loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+</audio>
+
+<!-- หน้า 1 -->
+<div id="page1" class="page active">
+  <h1>💖 สุขสันต์วันครบรอบ 7 เดือน 💖</h1>
+  <p>กดเพื่อเริ่มเซอร์ไพรส์ 🎁</p>
+  <button onclick="nextPage(2)">เริ่มเลย</button>
+</div>
+
+<!-- หน้า 2 -->
+<div id="page2" class="page">
+  <h1>7 เดือนที่ผ่านมา...</h1>
+  <p>มีทั้งรอยยิ้ม และความทรงจำดีๆ 😊</p>
+  <button onclick="nextPage(3)">ต่อไป</button>
+</div>
+
+<!-- หน้า 3 -->
+<div id="page3" class="page">
+  <h1>💌 ข้อความขอโทษ</h1>
+  <p>ขอโทษที่ทำให้เธอโกรธในทุกๆเรื่อง</p>
+  <p>ขอโทษที่ทำให้ไม่มีความสุขในข่วงเวลานึง</p>
+  <p>ขอโทษที่ทำให้หงุดหงิดอยู่บ่อยๆนะ</p>
+  <button onclick="nextPage(4)">ต่อไป</button>
+</div>
+
+<!-- หน้า 4 -->
+<div id="page4" class="page">
+  <h1>💌 ต่อไปนี้........</h1>
+  <p>เธออยู่กับเค้าตลอดไปเลยนะ</p>
+  <p>อย่าหายไปไหนนะ รู้ไหม</p>
+  <button onclick="nextPage(5)">ต่อไป</button>
+</div>
+
+<!-- หน้า 5 -->
+<div id="page5" class="page">
+  <h1>💌 สุดท้ายแล้ววว.......</h1>
+  <p>ขอบคุณที่อยู่ด้วยกันมาตลอดนะ</p>
+  <p>ขอให้เรามีความสุขแบบนี้ไปเรื่อยๆ ❤️</p>
+  <button onclick="nextPage(6)">ต่อไป</button>
+</div>
+
+<!-- หน้า 6 -->
+<div id="page6" class="page">
+  <h1>❤️❤️สุดท้ายจริงๆแล้ววววววว...อ๊ากก เขินจังงงง❤️❤️</h1>
+  <button onclick="nextPage(7)">ต่อไป</button>
+</div>
+
+<!-- หน้า 7 -->
+<div id="page7" class="page">
+  <h1>เค้ารักเธอที่สุดในโลกเลยยยยยยย❤️❤️❤️</h1>
+  <h1>ร๊าก Bubu ❤️❤️❤️</h1>
+  <button onclick="restart()">เริ่มใหม่</button>
+</div>
+
+<script>
+function nextPage(pageNumber) {
+  document.getElementById("music").play();
+
+  document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+  document.getElementById("page" + pageNumber).classList.add("active");
+}
+
+function restart() {
+  document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+  document.getElementById("page1").classList.add("active");
+}
+</script>
+
+</body>
+</html>
